@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex layout</title>
+
+    <style>
+        body{
+            margin: 0 auto;
+            width: 95vw;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .container{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .left{
+            background-color: lightblue;
+            height: 80vh;
+            width: 30vw;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        .right{
+            background-color: lightcoral;
+            height: 80vh;
+            width: 70vw;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        @media screen and (max-width: 425px) {
+            h1{
+                font-size: 20px;
+
+            }
+
+            .container{
+                flex-direction: column;
+            }
+
+            .left{
+                height: 30vh;
+                width: 100%;
+            }
+
+            .right{
+                height: 70vh;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Design a responsive flex layout
+    </h1>
+
+    <section>
+        <div class="container">
+            <div class="left">Left</div>
+            <div class="right">Right</div>
+        </div>
+    </section>
+</body>
+</html>
